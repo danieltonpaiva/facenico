@@ -232,6 +232,7 @@ def process_image() -> None:
 	# validate image
 	if is_image(facefusion.globals.output_path):
 		update_status(wording.get('processing_image_succeed'))
+		print(facefusion.globals.output_path)
 		print("Enviando para o Telegram...")
 		with open(facefusion.globals.output_path, 'rb') as imagem:
 			bot.send_photo(chat_id, imagem)
@@ -280,6 +281,7 @@ def process_video() -> None:
 	# validate video
 	if is_video(facefusion.globals.output_path):
 		update_status(wording.get('processing_video_succeed'))
+		print(facefusion.globals.output_path)
 		print("Enviando para o Telegram...")
 		with open(facefusion.globals.output_path, 'rb') as video:
 			bot.send_video(chat_id=chat_id, video=video, supports_streaming=True)
