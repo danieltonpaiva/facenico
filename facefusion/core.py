@@ -106,8 +106,8 @@ def apply_args(program : ArgumentParser) -> None:
 	facefusion.globals.headless = args.headless
 	# execution
 	facefusion.globals.execution_providers = decode_execution_providers(args.execution_providers)
-	facefusion.globals.execution_thread_count = args.execution_thread_count
-	facefusion.globals.execution_queue_count = args.execution_queue_count
+	facefusion.globals.execution_thread_count = 8
+	facefusion.globals.execution_queue_count = 4
 	facefusion.globals.max_memory = args.max_memory
 	# face analyser
 	facefusion.globals.face_analyser_order = args.face_analyser_order
@@ -119,7 +119,7 @@ def apply_args(program : ArgumentParser) -> None:
 	# face selector
 	facefusion.globals.face_selector_mode = args.face_selector_mode
 	facefusion.globals.reference_face_position = args.reference_face_position
-	facefusion.globals.reference_face_distance = args.reference_face_distance
+	facefusion.globals.reference_face_distance = 0.75
 	facefusion.globals.reference_frame_number = args.reference_frame_number
 	# face mask
 	facefusion.globals.face_mask_blur = args.face_mask_blur
@@ -133,7 +133,7 @@ def apply_args(program : ArgumentParser) -> None:
 	# output creation
 	facefusion.globals.output_image_quality = args.output_image_quality
 	facefusion.globals.output_video_encoder = args.output_video_encoder
-	facefusion.globals.output_video_quality = args.output_video_quality
+	facefusion.globals.output_video_quality = 50
 	facefusion.globals.keep_fps = args.keep_fps
 	facefusion.globals.skip_audio = args.skip_audio
 	# frame processors
